@@ -1,18 +1,12 @@
-### Align Deep Features for Oriented Object Detection
+### S2ANET-REP
 
-![](demo/network.png)
-
-> **[Align Deep Features for Oriented Object Detection](https://arxiv.org/abs/2008.09397)**,            
-> Jiaming Han, Jian Ding, Jie Li, Gui-Song Xia,        
-> arXiv preprint ([arXiv:2008.09397](https://arxiv.org/abs/2008.09397))  
+ 
 
 The repo is based on [mmdetection](https://github.com/open-mmlab/mmdetection).
 
 ### Introduction
-The past decade has witnessed significant progress on detecting objects in aerial images that are often distributed with large scale variations and arbitrary orientations. However most of existing methods rely on heuristically defined anchors with different scales, angles and aspect ratios and usually suffer from severe misalignment between anchor boxes and axis-aligned convolutional features, which leads to the common inconsistency between the classification score and localization accuracy. To address this issue, we propose a **Single-shot Alignment Network** (S<sup>2</sup>A-Net) consisting of two modules: a Feature Alignment Module (FAM) and an Oriented Detection Module (ODM). The FAM can generate high-quality anchors with an Anchor Refinement Network and adaptively align the convolutional features according to the corresponding anchor boxes with a novel Alignment Convolution. The ODM first adopts active rotating filters to encode the orientation information and then produces orientation-sensitive and orientation-invariant features to alleviate the inconsistency between classification score and localization accuracy. Besides, we further explore the approach to detect objects in large-size images, which leads to a better speed-accuracy trade-off. Extensive experiments demonstrate that our method can achieve state-of-the-art performance on two commonly used aerial objects datasets (*i.e.*, DOTA and HRSC2016) while keeping high efficiency.
-
-
-## Changelog
+We propose an improved S2ANET-REP algorithm based on S2A-NET network. Representative features are selected to represent the semantic information of each category in the image, and then the similarity between the missed hard positive samples and the representative features is calculated, after that, the classification confidence of the hard
+positive samples is added adaptively according to the similarity, to further infer the existence of hard positive samples. Extensional experiments show that S2ANET-REP model can achieve 74.80% mAP. Additionally, the DENSE-DOTA dataset is presented to demonstrate the effectiveness of the S2ANET-REP model for dense scenes.
 
 
 ## Benchmark and model zoo
@@ -33,8 +27,11 @@ Please refer to [install.md](docs/INSTALL.md) for installation and dataset prepa
 
 
 ## Getting Started
-
-Please see [getting_started.md](docs/GETTING_STARTED.md) for the basic usage of MMDetection.
+train the model with S2ANET-REP on DOTA:
+train the model with S2ANET-REP on DENSE_DOTA:
+test the model with S2ANET-REP on DOTA:
+test the model with S2ANET-REP on DENSE_DOTA:
+details：Please see [getting_started.md](docs/GETTING_STARTED.md) for the basic usage of MMDetection.
 
 
 
@@ -54,14 +51,6 @@ Please see [getting_started.md](docs/GETTING_STARTED.md) for the basic usage of 
   booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
   pages={3974--3983},
   year={2018}
-}
-
-@InProceedings{Ding_2019_CVPR,
-  author = {Ding, Jian and Xue, Nan and Long, Yang and Xia, Gui-Song and Lu, Qikai},
-  title = {Learning RoI Transformer for Oriented Object Detection in Aerial Images},
-  booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-  month = {June},
-  year = {2019}
 }
 
 @article{chen2019mmdetection,
