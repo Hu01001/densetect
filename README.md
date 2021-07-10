@@ -14,27 +14,24 @@ Please refer to [install.md](docs/INSTALL.md) for installation and dataset prepa
 
 
 ## Getting Started
+details：Please see [getting_started.md](docs/GETTING_STARTED.md) for the basic usage of MMDetection.
 BaiduYun download link of model trained on DOTA can be found [here](https://pan.baidu.com/s/1iUH2nkoRBWQwdx4pshPugw) with extracting code **8nv1**.
 BaiduYun download link of model trained on DENSE_DOTA can be found [here](https://pan.baidu.com/s/15WVFM1NZ-ONhA-SQo-ur4Q) with extracting code **moy7**.
 ```shell
 # single-gpu training
 # train the model with S2ANET-REP on DOTA
 python tools/train.py configs/context_s2anet_r50_fpn_1x.py
-python tools/train.py configs/context_s2anet_r50_fpn_1x.py
+
+# train the model with S2ANET-REP on DENSE_DOTA
+python tools/train.py configs/dense_context_s2anet_r50_fpn_1x.py
 
 # single-gpu testing
 # test the model with S2ANET-REP on DOTA
 python tools/test.py configs/dota/context_s2anet_r50_fpn_1x.py work_dirs/context_s2anet_r50_fpn_1x/epoch_12.pth --out work_dirs/context_s2anet_r50_fpn_1x/res.pkl
 
 # test the model with S2ANET-REP on DENSE_DOTA
-python tools/test.py configs/dota/context_s2anet_r50_fpn_1x.py work_dirs/context_s2anet_r50_fpn_1x/epoch_12.pth --out work_dirs/context_s2anet_r50_fpn_1x/res.pkl
+python tools/test.py configs/dota/dense_context_s2anet_r50_fpn_1x.py work_dirs/dense_context_s2anet_r50_fpn_1x/epoch_12.pth --out work_dirs/dense_context_s2anet_r50_fpn_1x/res.pkl
 ```
-train the model with S2ANET-REP on DOTA:
-train the model with S2ANET-REP on DENSE_DOTA:
-test the model with S2ANET-REP on DOTA:
-test the model with S2ANET-REP on DENSE_DOTA:
-details：Please see [getting_started.md](docs/GETTING_STARTED.md) for the basic usage of MMDetection.
-
 
 
 ## Citation
