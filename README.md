@@ -14,7 +14,8 @@ Please refer to [install.md](docs/INSTALL.md) for installation and dataset prepa
 
 
 ## Getting Started
-details：Please see [getting_started.md](docs/GETTING_STARTED.md) for the basic usage of MMDetection.
+Details：Please see [getting_started.md](docs/GETTING_STARTED.md) for the basic usage of MMDetection.
+
 BaiduYun download link of model trained on DOTA can be found [here](https://pan.baidu.com/s/1iUH2nkoRBWQwdx4pshPugw) with extracting code **8nv1**.
 BaiduYun download link of model trained on DENSE_DOTA can be found [here](https://pan.baidu.com/s/15WVFM1NZ-ONhA-SQo-ur4Q) with extracting code **moy7**.
 ```shell
